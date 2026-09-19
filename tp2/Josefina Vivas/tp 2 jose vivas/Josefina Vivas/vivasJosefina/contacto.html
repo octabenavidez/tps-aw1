@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Contacto</title>
+</head>
+
+<body>
+    <header>
+        <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html">Catálogo</a>
+            <a href="./carrito.html">Carrito</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+        <p>Respondemos de lunes a viernes, de 9 a 18 horas.</p>
+
+        <section>
+            <h2>Escribinos</h2>
+            <form action="./contacto.html" method="post">
+                <p>
+                    <label for="nombre">Nombre y apellido *</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3">
+                </p>
+                <p>
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </p>
+                <p>
+                    <label for="motivo">Motivo *</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">Elegí un motivo</option>
+                        <option value="producto">Consulta sobre un producto</option>
+                        <option value="compatibilidad">Compatibilidad con mi vehículo</option>
+                        <option value="envio">Estado de un envío</option>
+                        <option value="posventa">Garantía o posventa</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required minlength="10"></textarea>
+                </p>
+                <p>
+                    <label><input type="checkbox" name="novedades"> Quiero recibir novedades por correo</label>
+                </p>
+
+                <button type="submit">Enviar consulta</button>
+                <button type="reset">Borrar formulario</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Otros canales</h2>
+            <ul>
+                <li>Correo: info@racinggarage.com.ar</li>
+                <li>Teléfono: +54 351 123-4567</li>
+                <li>Dirección: Av. Colón 1234, Córdoba, Argentina</li>
+            </ul>
+
+            <h3>Horarios de atención</h3>
+            <table>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+                <tr>
+                    <td>Lunes a viernes</td>
+                    <td>9:00 a 18:00</td>
+                </tr>
+                <tr>
+                    <td>Sábados</td>
+                    <td>9:00 a 13:00</td>
+                </tr>
+                <tr>
+                    <td>Domingos y feriados</td>
+                    <td>Cerrado</td>
+                </tr>
+            </table>
+
+            <h3>Cómo llegar</h3>
+            <img src="./recursos/imagenes/mapa-local.svg" alt="mapa con la ubicación del local">
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/racinggarage" target="_blank">
+                    @racinggarage
+                </a>
+            </li>
+            <li>Av. Colón 1234 - Córdoba</li>
+            <li>info@racinggarage.com.ar</li>
+            <li>+54 351 123-4567</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

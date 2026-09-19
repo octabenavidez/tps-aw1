@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Carrito</title>
+</head>
+
+<body>
+    <header>
+        <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html">Catálogo</a>
+            <a href="./carrito.html">Carrito</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Carrito de compras</h1>
+
+        <section>
+            <h2>Productos seleccionados</h2>
+
+            <form action="./carrito.html" method="post">
+                <table>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./recursos/imagenes/productos/faros-led-h4.svg" alt="faros LED H4" width="60">
+                            Faros LED H4
+                        </td>
+                        <td>$28.700</td>
+                        <td>
+                            <input type="number" name="cantidad_1" value="1" min="1" max="12">
+                        </td>
+                        <td>$28.700</td>
+                        <td>
+                            <button type="submit" name="eliminar" value="1">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./recursos/imagenes/productos/cubre-volante.svg" alt="cubre volante deportivo" width="60">
+                            Cubre volante deportivo
+                        </td>
+                        <td>$12.400</td>
+                        <td>
+                            <input type="number" name="cantidad_2" value="2" min="1" max="10">
+                        </td>
+                        <td>$24.800</td>
+                        <td>
+                            <button type="submit" name="eliminar" value="2">Eliminar</button>
+                        </td>
+                    </tr>
+                </table>
+
+                <button type="submit" name="accion" value="actualizar">Actualizar carrito</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Resumen de la compra</h2>
+            <ul>
+                <li>Subtotal: $53.500</li>
+                <li>Envío: Gratis</li>
+                <li>Total: $53.500</li>
+            </ul>
+
+            <a href="./finalizar-compra.html">Finalizar compra</a>
+            <a href="./catalogo.html">Seguir comprando</a>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/racinggarage" target="_blank">
+                    @racinggarage
+                </a>
+            </li>
+            <li>Av. Colón 1234 - Córdoba</li>
+            <li>info@racinggarage.com.ar</li>
+            <li>+54 351 123-4567</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

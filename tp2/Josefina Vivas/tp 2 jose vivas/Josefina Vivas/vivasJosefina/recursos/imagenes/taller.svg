@@ -1,0 +1,12 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="500" fill="#161616"/>
+<g transform="translate(450,290)">
+  <path d="M-260,60 C-252,20 -210,0 -150,-8 L-70,-22 C-10,-28 60,-26 100,-4
+           L170,38 L260,44 C275,46 282,58 272,72
+           L-230,72 C-248,72 -262,80 -260,60 Z" fill="#F2F2F2"/>
+  <circle cx="-170" cy="72" r="26" fill="#161616"/>
+  <circle cx="-170" cy="72" r="11" fill="#8A8A8A"/>
+  <circle cx="150" cy="72" r="26" fill="#161616"/>
+  <circle cx="150" cy="72" r="11" fill="#8A8A8A"/>
+</g>
+<text x="60" y="70" font-family="Arial, sans-serif" font-weight="700" font-size="30" fill="#F2F2F2">TALLER RACING GARAGE</text>
+</svg>
