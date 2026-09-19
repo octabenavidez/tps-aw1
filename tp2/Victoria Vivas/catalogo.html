@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Catálogo</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+            <strong>RACING GARAGE</strong>
+
+            <button type="button" aria-label="Abrir carrito de compras">
+                🛒
+            </button>
+        </div>
+
+        <nav aria-label="Navegación principal">
+
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="#">NOSOTROS</a>
+            <a href="#">CONTACTOS</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h1>Catálogo de productos</h1>
+
+
+        <div>
+
+            <aside aria-labelledby="titulo-filtros">
+
+                <h2 id="titulo-filtros">FILTRA TU VEHÍCULO</h2>
+
+
+                <label for="marca">MARCA</label>
+
+                <select name="marca" id="marca">
+
+                    <option value="">Seleccionar Marca</option>
+                    <option value="ford">Ford</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="volkswagen">Volkswagen</option>
+
+                </select>
+
+
+                <label for="modelo">MODELO</label>
+
+                <select name="modelo" id="modelo">
+
+                    <option value="">Seleccionar Modelo</option>
+                    <option value="fiesta">Fiesta</option>
+                    <option value="gol">Gol</option>
+                    <option value="uno">Uno</option>
+
+                </select>
+
+
+                <label for="anio">AÑO</label>
+
+                <select name="anio" id="anio">
+
+                    <option value="">Seleccionar Año</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+
+                </select>
+
+
+                <fieldset>
+
+                    <legend>CATEGORÍAS</legend>
+
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="interiores">
+                        Accesorios Interiores
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="exteriores">
+                        Accesorios Exteriores
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="limpieza">
+                        Limpieza
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="iluminacion">
+                        Iluminación
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="personalizacion">
+                        Personalización
+                    </label>
+
+                </fieldset>
+
+            </aside>
+
+
+            <section aria-labelledby="titulo-productos">
+
+                <h2 id="titulo-productos">Productos disponibles</h2>
+
+
+                <form role="search">
+
+                    <label for="buscar">Buscar productos</label>
+
+                    <input type="search"
+                           id="buscar"
+                           name="buscar"
+                           placeholder="BUSCAR PRODUCTOS">
+
+                    <button type="submit" aria-label="Buscar productos">
+                        🔍
+                    </button>
+
+                </form>
+
+
+                <div>
+
+
+                    <article>
+
+                        <img src="./imagenes/filtroaire.jpg"
+                             alt="Filtro de aire cónico deportivo"
+                             width="400"
+                             height="200">
+
+                        <h3>Filtro de Aire Cónico</h3>
+
+                        <p>Precio: $8.500</p>
+
+                        <p>
+                            Filtro lavable deportivo de alta
+                            inducción y flujo mejorado.
+                        </p>
+
+
+                        <div>
+
+                            <button type="button"
+                                    aria-label="Agregar Filtro de Aire Cónico al carrito">
+                                AGREGAR 🛒
+                            </button>
+
+                            <a href="producto.html">
+                                DETALLE
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article>
+
+                        <img src="./imagenes/kit.PNG"
+                             alt="Kit de pastillas cerámicas con disco de freno"
+                             width="400"
+                             height="200">
+
+                        <h3>Kit de Pastillas Cerámicas</h3>
+
+                        <p>Precio: $22.000</p>
+
+                        <p>
+                            Compuesto cerámico de alto coeficiente
+                            de fricción libre de ruido.
+                        </p>
+
+
+                        <div>
+
+                            <button type="button"
+                                    aria-label="Agregar Kit de Pastillas Cerámicas al carrito">
+                                AGREGAR 🛒
+                            </button>
+
+                            <a href="producto.html">
+                                DETALLE
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article>
+
+                        <img src="./imagenes/am.jpg"
+                             alt="Amortiguador regulable deportivo"
+                             width="400"
+                             height="200">
+
+                        <h3>Amortiguador Regulable</h3>
+
+                        <p>Precio: $42.000</p>
+
+                        <p>
+                            Ajustables en altura y rebote
+                            para control absoluto.
+                        </p>
+
+
+                        <div>
+
+                            <button type="button"
+                                    aria-label="Agregar Amortiguador Regulable al carrito">
+                                AGREGAR 🛒
+                            </button>
+
+                            <a href="producto.html">
+                                DETALLE
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article>
+
+                        <img src="./imagenes/tuercas.jpg"
+                             alt="Kit de tuercas de seguridad antirrobo"
+                             width="400"
+                             height="200">
+
+                        <h3>Kit de Tuercas Seguras</h3>
+
+                        <p>Precio: $5.500</p>
+
+                        <p>
+                            Aleación de titanio antirrobo
+                            con llave de codificación única.
+                        </p>
+
+
+                        <div>
+
+                            <button type="button"
+                                    aria-label="Agregar Kit de Tuercas Seguras al carrito">
+                                AGREGAR 🛒
+                            </button>
+
+                            <a href="producto.html">
+                                DETALLE
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Racing Garage - Accesorios para tu vehículo
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
