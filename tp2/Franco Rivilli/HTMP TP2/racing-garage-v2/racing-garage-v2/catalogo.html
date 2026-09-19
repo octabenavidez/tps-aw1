@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Catálogo</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+        </a>
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html" aria-current="page">Catálogo</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+            <a href="./carrito.html">Carrito</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Catálogo</h1>
+
+        <!-- filtros del catálogo -->
+        <!--
+        marca
+        modelo
+        categoria
+        precio
+        -->
+        <form>
+            <label for="id-marca">Marca</label>
+            <select name="marca" id="id-marca">
+                <option value="">Todas</option>
+                <option value="ford">Ford</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="volkswagen">Volkswagen</option>
+            </select>
+
+            <label for="id-categoria">Categoría</label>
+            <select name="categoria" id="id-categoria">
+                <option value="">Todas</option>
+                <option value="interior">Accesorios interiores</option>
+                <option value="exterior">Accesorios exteriores</option>
+                <option value="limpieza">Limpieza y cuidado</option>
+                <option value="iluminacion">Iluminación</option>
+                <option value="personalizacion">Personalización</option>
+            </select>
+
+            <button type="submit">Aplicar filtros</button>
+        </form>
+
+        <section>
+            <h2>Productos</h2>
+            <div>
+                <article>
+                    <h3>Llantas Forjadas RS-7</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/producto/llantas.jpg" alt="Llantas forjadas RS-7">
+                    </picture>
+                    <p>
+                        Rines forjados de aluminio de alto rendimiento
+                    </p>
+                    <ul>
+                        <li>Diámetro 18" / 19" / 20"</li>
+                        <li>Precio $ 1249</li>
+                    </ul>
+                    <a href="./producto.html">Ver más</a>
+                </article>
+
+                <article>
+                    <h3>Suspensión Coilover Pro-R</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/producto/suspension.jpg" alt="Suspensión Coilover Pro-R">
+                    </picture>
+                    <p>
+                        Suspensión regulable de alto rendimiento
+                    </p>
+                    <ul>
+                        <li>Compatible con la mayoría de vehículos</li>
+                        <li>Precio $ 899</li>
+                    </ul>
+                    <a href="./producto.html">Ver más</a>
+                </article>
+
+                <article>
+                    <h3>Escape Deportivo Titan-X</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/producto/escape.jpg" alt="Escape deportivo Titan-X">
+                    </picture>
+                    <p>
+                        Sistema de escape deportivo de alto flujo
+                    </p>
+                    <ul>
+                        <li>Acero inoxidable</li>
+                        <li>Precio $ 649</li>
+                    </ul>
+                    <a href="./producto.html">Ver más</a>
+                </article>
+
+                <article>
+                    <h3>Volante Deportivo Carbono</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/producto/volante.jpg" alt="Volante deportivo carbono">
+                    </picture>
+                    <p>
+                        Volante de cuero con inserto de fibra de carbono
+                    </p>
+                    <ul>
+                        <li>Compatible con modelos europeos y asiáticos</li>
+                        <li>Precio $ 189900</li>
+                    </ul>
+                    <a href="./producto.html">Ver más</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/@racinggarage" target="_blank" aria-label="Seguinos en Instagram, se abre en una pestaña nueva">
+                    @racinggarage
+                </a>
+            </li>
+            <li>
+                Córdoba, Argentina
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

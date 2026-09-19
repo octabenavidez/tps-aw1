@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Finalizar compra</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+        </a>
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html">Catálogo</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+            <a href="./carrito.html">Carrito</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Finalizar compra</h1>
+
+        <!-- datos para el envío del pedido -->
+        <!--
+        nombre
+        email
+        telefono
+        direccion
+        ciudad
+        codigo postal
+        -->
+        <form action="./confirmacion.html" method="get">
+            <label for="id-nombre">Nombre completo</label>
+            <input type="text" name="nombre" id="id-nombre">
+
+            <label for="id-email">Email</label>
+            <input type="email" name="email" id="id-email">
+
+            <label for="id-telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="id-telefono">
+
+            <label for="id-direccion">Dirección</label>
+            <input type="text" name="direccion" id="id-direccion">
+
+            <label for="id-ciudad">Ciudad</label>
+            <input type="text" name="ciudad" id="id-ciudad">
+
+            <label for="id-codigo-postal">Código postal</label>
+            <input type="text" name="codigo-postal" id="id-codigo-postal">
+
+            <h2>Resumen del pedido</h2>
+            <ul>
+                <li>Subtotal $ 1249</li>
+                <li>Envío Gratis</li>
+                <li>Total $ 1249</li>
+            </ul>
+
+            <button type="submit">Confirmar compra</button>
+        </form>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/@racinggarage" target="_blank" aria-label="Seguinos en Instagram, se abre en una pestaña nueva">
+                    @racinggarage
+                </a>
+            </li>
+            <li>
+                Córdoba, Argentina
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

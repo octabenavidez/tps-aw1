@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Mi carrito</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+        </a>
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html">Catálogo</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+            <a href="./carrito.html" aria-current="page">Carrito</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Mi carrito</h1>
+
+        <form action="./finalizar-compra.html" method="get">
+            <section>
+                <h2>Productos seleccionados</h2>
+                <div>
+                    <article>
+                        <picture>
+                            <img src="./recursos/imagenes/producto/llantas.jpg" alt="Llantas forjadas RS-7">
+                        </picture>
+                        <p>Llantas Forjadas RS-7</p>
+
+                        <label for="id-cantidad-1">Cantidad</label>
+                        <input type="number" name="cantidad-1" id="id-cantidad-1" value="1" min="1">
+
+                        <p>Precio $ 1249</p>
+
+                        <button type="button">Eliminar</button>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <h2>Resumen del pedido</h2>
+                <ul>
+                    <li>Subtotal $ 1249</li>
+                    <li>Envío Gratis</li>
+                    <li>Total $ 1249</li>
+                </ul>
+
+                <button type="submit">Proceder al pago</button>
+                <a href="./catalogo.html">Seguir comprando</a>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/@racinggarage" target="_blank" aria-label="Seguinos en Instagram, se abre en una pestaña nueva">
+                    @racinggarage
+                </a>
+            </li>
+            <li>
+                Córdoba, Argentina
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
