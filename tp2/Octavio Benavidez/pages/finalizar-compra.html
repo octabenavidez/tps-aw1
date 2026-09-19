@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Finalizar compra en Racing Garage. Completa tus datos de envío y facturación para recibir tus accesorios deportivos.">
+    <title>Finalizar Compra | Racing Garage</title>
+</head>
+
+<body>
+    <!-- Encabezado principal -->
+    <header role="banner">
+        <div>
+            <!-- Logo de la marca -->
+            <a href="../index.html" aria-label="Racing Garage - Página de inicio">
+                <span aria-hidden="true">|</span>
+                <span>RACING GARAGE</span>
+            </a>
+
+            <!-- Menú de navegación -->
+            <nav role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="./productos.html">PRODUCTOS</a>
+                    </li>
+                    <li>
+                        <a href="./nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">CONTACTO</a>
+                    </li>
+                    <li>
+                        <a href="./carrito.html" aria-label="Carrito de compras">
+                            <img src="../recursos/imagenes/iconos/icono-carrito.svg" alt="" width="24" height="24"
+                                aria-hidden="true">
+                            <span aria-hidden="true">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal: Finalizar compra -->
+    <main id="main-content">
+        <div>
+            <header>
+                <h1>FINALIZAR COMPRA</h1>
+                <p>Completá tus datos de entrega y facturación para confirmar tu pedido.</p>
+            </header>
+
+            <div>
+                <!-- Formulario de compra -->
+                <section aria-labelledby="checkout-form-title">
+                    <h2 id="checkout-form-title">Formulario de datos para la compra</h2>
+
+                    <form action="./confirmacion-compra.html" method="get">
+                        <!-- Paso 1: Datos del cliente -->
+                        <fieldset>
+                            <legend>1. Datos del Cliente</legend>
+
+                            <div>
+                                <div>
+                                    <label for="first-name">Nombre *</label>
+                                    <input type="text" id="first-name" name="nombre" required
+                                        autocomplete="given-name" placeholder="Ej: Lucas">
+                                </div>
+                                <div>
+                                    <label for="last-name">Apellido *</label>
+                                    <input type="text" id="last-name" name="apellido" required
+                                        autocomplete="family-name" placeholder="Ej: Fernández">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="dni">DNI o CUIT *</label>
+                                <input type="text" id="dni" name="dni" required
+                                    placeholder="Sin puntos ni guiones">
+                            </div>
+                        </fieldset>
+
+                        <!-- Paso 2: Datos de contacto -->
+                        <fieldset>
+                            <legend>2. Datos de Contacto</legend>
+
+                            <div>
+                                <div>
+                                    <label for="email">Correo Electrónico *</label>
+                                    <input type="email" id="email" name="email" required
+                                        autocomplete="email" placeholder="nombre@ejemplo.com">
+                                </div>
+                                <div>
+                                    <label for="phone">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="phone" name="telefono" required
+                                        autocomplete="tel" placeholder="+54 9 351 1234567">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Paso 3: Dirección de entrega -->
+                        <fieldset>
+                            <legend>3. Dirección de Entrega</legend>
+
+                            <div>
+                                <div>
+                                    <label for="address-street">Calle y Altura *</label>
+                                    <input type="text" id="address-street" name="direccion" required
+                                        autocomplete="street-address" placeholder="Av. Colón 1234">
+                                </div>
+                                <div>
+                                    <label for="address-floor">Piso / Depto (Opcional)</label>
+                                    <input type="text" id="address-floor" name="piso_depto"
+                                        placeholder="Piso 4B">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <label for="city">Ciudad / Localidad *</label>
+                                    <input type="text" id="city" name="ciudad" required
+                                        placeholder="Córdoba">
+                                </div>
+                                <div>
+                                    <label for="province">Provincia *</label>
+                                    <select id="province" name="provincia" required>
+                                        <option value="">Seleccione una provincia...</option>
+                                        <option value="cordoba" selected>Córdoba</option>
+                                        <option value="buenos-aires">Buenos Aires</option>
+                                        <option value="caba">Ciudad Autónoma de Buenos Aires</option>
+                                        <option value="santa-fe">Santa Fe</option>
+                                        <option value="mendoza">Mendoza</option>
+                                        <option value="otra">Otra provincia</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="postal-code">Código Postal *</label>
+                                    <input type="text" id="postal-code" name="codigo_postal" required
+                                        placeholder="X5000">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Paso 4: Método de pago -->
+                        <fieldset>
+                            <legend>4. Método de Pago</legend>
+
+                            <div>
+                                <div>
+                                    <input type="radio" id="pay-card" name="metodo_pago" value="tarjeta" checked>
+                                    <label for="pay-card">Tarjeta de Crédito / Débito (Visa, Mastercard, Cabal)</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="pay-mp" name="metodo_pago" value="mercadopago">
+                                    <label for="pay-mp">Mercado Pago (Dinero en cuenta o cuotas)</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="pay-transfer" name="metodo_pago" value="transferencia">
+                                    <label for="pay-transfer">Transferencia Bancaria directa (10% OFF adicional)</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Paso 5: Términos y condiciones -->
+                        <div>
+                            <input type="checkbox" id="terms" name="terminos" required>
+                            <label for="terms">He leído y acepto los <a href="#">términos y condiciones</a> de compra y políticas de devolución de Racing Garage.</label>
+                        </div>
+
+                        <!-- Botón para confirmar pedido -->
+                        <div>
+                            <button type="submit">
+                                CONFIRMAR PEDIDO &rarr;
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Resumen lateral de la orden -->
+                <aside aria-labelledby="order-summary-title">
+                    <div>
+                        <h2 id="order-summary-title">Tu Pedido</h2>
+
+                        <ul>
+                            <li>
+                                <span>1x Volante Deportivo Alcantara Pro</span>
+                                <span>$189.900</span>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <dl>
+                            <div>
+                                <dt>Subtotal:</dt>
+                                <dd>$189.900</dd>
+                            </div>
+                            <div>
+                                <dt>Envío Express:</dt>
+                                <dd><span>Gratis</span></dd>
+                            </div>
+                            <div>
+                                <dt>Total Final:</dt>
+                                <dd><strong>$189.900</strong></dd>
+                            </div>
+                        </dl>
+
+                        <div>
+                            <p>&#128274; Transacción encriptada con certificado SSL de 256 bits.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer role="contentinfo">
+        <div>
+            <div>
+                <p><span aria-hidden="true">|</span> RACING GARAGE</p>
+                <p>Equipamiento de alto rendimiento, estética tuning y accesorios premium.</p>
+            </div>
+            <nav aria-label="Navegación del pie">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Catálogo</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h3>Atención al Cliente</h3>
+                <address>
+                    <p>Email: <a href="mailto:info@racinggarage.com.ar">info@racinggarage.com.ar</a></p>
+                    <p>Córdoba, Argentina</p>
+                </address>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2026 Racing Garage. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

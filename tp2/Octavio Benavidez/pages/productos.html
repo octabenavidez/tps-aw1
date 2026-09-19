@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Catálogo de productos de Racing Garage: volantes, pomos de fibra de carbono, alfombrillas, arneses y accesorios deportivos para autos.">
+    <title>Catálogo de Productos | Racing Garage</title>
+</head>
+
+<body>
+    <!-- Encabezado principal -->
+    <header role="banner">
+        <div>
+            <!-- Logo de la marca -->
+            <a href="../index.html" aria-label="Racing Garage - Página de inicio">
+                <span aria-hidden="true">|</span>
+                <span>RACING GARAGE</span>
+            </a>
+
+            <!-- Menú de navegación -->
+            <nav role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="./productos.html" aria-current="page">PRODUCTOS</a>
+                    </li>
+                    <li>
+                        <a href="./nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">CONTACTO</a>
+                    </li>
+                    <li>
+                        <a href="./carrito.html" aria-label="Carrito de compras (0 productos)">
+                            <img src="../recursos/imagenes/iconos/icono-carrito.svg" alt="" width="24" height="24" aria-hidden="true">
+                            <span aria-hidden="true">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal: Catálogo -->
+    <main id="main-content">
+        <!-- Barra lateral de filtros -->
+        <aside aria-labelledby="categories-heading">
+            <h2 id="categories-heading">CATEGORÍAS</h2>
+            <nav aria-label="Filtrar catálogo por categorías">
+                <ul>
+                    <li>
+                        <a href="#interiores" aria-current="true">
+                            <span aria-hidden="true">•</span>
+                            Accesorios Interiores
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#exteriores">Accesorios Exteriores</a>
+                    </li>
+                    <li>
+                        <a href="#limpieza">Limpieza y Cuidado</a>
+                    </li>
+                    <li>
+                        <a href="#iluminacion">Iluminación</a>
+                    </li>
+                    <li>
+                        <a href="#personalizacion">Personalización</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Filtro por rango de precio (Cambio de diseño 1) -->
+            <section aria-labelledby="price-filter-heading">
+                <h3 id="price-filter-heading">Rango de Precio</h3>
+                <form>
+                    <div>
+                        <input type="radio" id="price-all" name="precio_filtro" value="todos" checked>
+                        <label for="price-all">Todos los precios</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="price-under-30k" name="precio_filtro" value="0-30000">
+                        <label for="price-under-30k">Hasta $30.000</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="price-30k-60k" name="precio_filtro" value="30000-60000">
+                        <label for="price-30k-60k">$30.000 a $60.000</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="price-over-60k" name="precio_filtro" value="60000+">
+                        <label for="price-over-60k">Más de $60.000</label>
+                    </div>
+                </form>
+            </section>
+        </aside>
+
+        <!-- Listado de productos -->
+        <section aria-labelledby="catalog-heading">
+            <h1 id="catalog-heading">Catálogo de Accesorios y Productos para Automóviles</h1>
+
+            <!-- Barra de búsqueda y orden -->
+            <div>
+                <form role="search" aria-label="Búsqueda de productos">
+                    <div>
+                        <label for="search-input">Buscar productos:</label>
+                        <input type="search" id="search-input" name="search" placeholder="Buscar productos...">
+                    </div>
+                </form>
+
+                <div>
+                    <label for="sort-select">Ordenar por:</label>
+                    <select id="sort-select" name="sort">
+                        <option value="price-desc" selected>Mayor Precio</option>
+                        <option value="price-asc">Menor Precio</option>
+                        <option value="popular">Más Populares</option>
+                        <option value="name-asc">Nombre (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grilla de productos -->
+            <div role="region" aria-label="Listado de productos disponibles">
+                <!-- Producto 1: Volante Alcantara -->
+                <article aria-labelledby="product-title-1">
+                    <figure>
+                        <img src="../recursos/imagenes/productos/volante-alcantara.webp"
+                            alt="Volante Deportivo Alcantara negro con costuras rojas y fibra de carbono" width="400"
+                            height="320">
+                    </figure>
+                    <div>
+                        <h3 id="product-title-1">Volante Deportivo Alcantara</h3>
+                        <span>Envío Gratis</span>
+                        <div>
+                            <p aria-label="Precio: 189.900 pesos">$189.900</p>
+                            <a href="./detalle-producto.html"
+                                aria-label="Ver detalles de Volante Deportivo Alcantara">VER DETALLE</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 2: Pomo de Cambios -->
+                <article aria-labelledby="product-title-2">
+                    <figure>
+                        <img src="../recursos/imagenes/productos/pomo-carbono.webp"
+                            alt="Pomo de cambios ergonómico con acabado en auténtica fibra de carbono" width="400"
+                            height="320">
+                    </figure>
+                    <div>
+                        <h3 id="product-title-2">Pomo de Cambios Fibra de Carbono</h3>
+                        <div>
+                            <p aria-label="Precio: 45.900 pesos">$45.900</p>
+                            <a href="./detalle-producto.html"
+                                aria-label="Ver detalles de Pomo de Cambios Fibra de Carbono">VER DETALLE</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 3: Alfombrillas Tuning -->
+                <article aria-labelledby="product-title-3">
+                    <figure>
+                        <img src="../recursos/imagenes/productos/alfombrillas-tuning.webp"
+                            alt="Juego de alfombrillas tuning de alta resistencia con ribete rojo deportivo" width="400"
+                            height="320">
+                    </figure>
+                    <div>
+                        <h3 id="product-title-3">Alfombrillas Tuning Deportivas</h3>
+                        <div>
+                            <p aria-label="Precio: 28.500 pesos">$28.500</p>
+                            <a href="./detalle-producto.html"
+                                aria-label="Ver detalles de Alfombrillas Tuning Deportivas">VER DETALLE</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 4: Soporte Celular -->
+                <article aria-labelledby="product-title-4">
+                    <figure>
+                        <img src="../recursos/imagenes/productos/soporte-celular.jpg"
+                            alt="Soporte articulado de celular para auto fabricado en aleación de aluminio" width="400"
+                            height="320">
+                    </figure>
+                    <div>
+                        <h3 id="product-title-4">Soporte de Celular de Aluminio</h3>
+                        <div>
+                            <p aria-label="Precio: 18.000 pesos">$18.000</p>
+                            <a href="./detalle-producto.html"
+                                aria-label="Ver detalles de Soporte de Celular de Aluminio">VER DETALLE</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 5: Arnés de Seguridad -->
+                <article aria-labelledby="product-title-5">
+                    <figure>
+                        <img src="../recursos/imagenes/productos/arnes-seguridad.webp"
+                            alt="Arnés de seguridad de competición de 4 puntos color rojo deportivo" width="400"
+                            height="320">
+                    </figure>
+                    <div>
+                        <h3 id="product-title-5">Arnés de Seguridad de 4 Puntos</h3>
+                        <span>Envío Gratis</span>
+                        <div>
+                            <p aria-label="Precio: 75.000 pesos">$75.000</p>
+                            <a href="./detalle-producto.html"
+                                aria-label="Ver detalles de Arnés de Seguridad de 4 Puntos">VER DETALLE</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 6: Pedales Deportivos -->
+                <article aria-labelledby="product-title-6">
+                    <figure>
+                        <img src="../recursos/imagenes/productos/pedales-aluminio.webp"
+                            alt="Kit de cubrapedales deportivos en aluminio cepillado antideslizante" width="400"
+                            height="320">
+                    </figure>
+                    <div>
+                        <h3 id="product-title-6">Pedales Deportivos de Aluminio</h3>
+                        <div>
+                            <p aria-label="Precio: 32.900 pesos">$32.900</p>
+                            <a href="./detalle-producto.html"
+                                aria-label="Ver detalles de Pedales Deportivos de Aluminio">VER DETALLE</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer role="contentinfo">
+        <div>
+            <div>
+                <p><span aria-hidden="true">|</span> RACING GARAGE</p>
+                <p>Equipamiento de alto rendimiento, estética tuning y accesorios premium.</p>
+            </div>
+            <nav aria-label="Enlaces rápidos">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Catálogo Completo</a></li>
+                    <li><a href="./nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h3>Atención al Cliente</h3>
+                <address>
+                    <p>Email: <a href="mailto:info@racinggarage.com.ar">info@racinggarage.com.ar</a></p>
+                    <p>Córdoba, Argentina</p>
+                </address>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2026 Racing Garage. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

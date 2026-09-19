@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Carrito de compras de Racing Garage. Revisa tus artículos seleccionados, modifica cantidades y finaliza tu compra con seguridad.">
+    <title>Carrito de Compras | Racing Garage</title>
+</head>
+
+<body>
+    <!-- Encabezado principal -->
+    <header role="banner">
+        <div>
+            <!-- Logo de la marca -->
+            <a href="../index.html" aria-label="Racing Garage - Página de inicio">
+                <span aria-hidden="true">|</span>
+                <span>RACING GARAGE</span>
+            </a>
+
+            <!-- Menú de navegación -->
+            <nav role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="./productos.html">PRODUCTOS</a>
+                    </li>
+                    <li>
+                        <a href="./nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">CONTACTO</a>
+                    </li>
+                    <li>
+                        <a href="./carrito.html" aria-current="page"
+                            aria-label="Carrito de compras (1 producto)">
+                            <img src="../recursos/imagenes/iconos/icono-carrito.svg" alt="" width="24" height="24"
+                                aria-hidden="true">
+                            <span aria-hidden="true">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal: Carrito -->
+    <main id="main-content">
+        <div>
+            <header>
+                <h1>CARRITO DE COMPRAS</h1>
+                <p>Revisá tus productos seleccionados antes de avanzar al pago.</p>
+            </header>
+
+            <div>
+                <!-- Listado de productos en el carrito -->
+                <section aria-labelledby="cart-items-title">
+                    <h2 id="cart-items-title">Listado de artículos en el carrito</h2>
+
+                    <div>
+                        <table>
+                            <caption>Detalle de productos agregados al carrito de compras</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Precio Unitario</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Subtotal</th>
+                                    <th scope="col"><span aria-hidden="true">Acciones</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Producto 1: Volante Deportivo Alcantara -->
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <img src="../recursos/imagenes/productos/volante-alcantara.webp"
+                                                alt="Volante Deportivo Alcantara Pro" width="80" height="80">
+                                            <div>
+                                                <a href="./detalle-producto.html">
+                                                    Volante Deportivo Alcantara Pro
+                                                </a>
+                                                <span>Categoría: Accesorios Interiores</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$189.900</td>
+                                    <td>
+                                        <div>
+                                            <button type="button" aria-label="Disminuir cantidad">-</button>
+                                            <label for="item-qty-1">Cantidad:</label>
+                                            <input type="number" id="item-qty-1" name="cantidad_item_1" value="1" min="1"
+                                                max="10">
+                                            <button type="button" aria-label="Aumentar cantidad">+</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong>$189.900</strong>
+                                    </td>
+                                    <td>
+                                        <button type="button"
+                                            aria-label="Eliminar Volante Deportivo Alcantara Pro del carrito">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Botones de acción del carrito -->
+                    <div>
+                        <a href="./productos.html">
+                            &larr; Continuar Comprando
+                        </a>
+                        <button type="button">
+                            Vaciar Carrito
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Resumen de compra -->
+                <aside aria-labelledby="summary-title">
+                    <div>
+                        <h2 id="summary-title">Resumen del Pedido</h2>
+
+                        <dl>
+                            <div>
+                                <dt>Subtotal:</dt>
+                                <dd>$189.900</dd>
+                            </div>
+                            <div>
+                                <dt>Envío:</dt>
+                                <dd><span>¡Gratis a todo el país!</span></dd>
+                            </div>
+                            <div>
+                                <dt>Total Estimado:</dt>
+                                <dd><strong>$189.900</strong></dd>
+                            </div>
+                        </dl>
+
+                        <div>
+                            <a href="./finalizar-compra.html" role="button">
+                                FINALIZAR COMPRA &rarr;
+                            </a>
+                        </div>
+
+                        <div>
+                            <img src="../recursos/imagenes/iconos/icono-seguridad.svg" alt="" width="24" height="24"
+                                aria-hidden="true">
+                            <span>Pago 100% encriptado y seguro</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer role="contentinfo">
+        <div>
+            <div>
+                <p><span aria-hidden="true">|</span> RACING GARAGE</p>
+                <p>Equipamiento de alto rendimiento, estética tuning y accesorios premium.</p>
+            </div>
+            <nav aria-label="Navegación del pie">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Catálogo</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h3>Atención al Cliente</h3>
+                <address>
+                    <p>Email: <a href="mailto:info@racinggarage.com.ar">info@racinggarage.com.ar</a></p>
+                    <p>Córdoba, Argentina</p>
+                </address>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2026 Racing Garage. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

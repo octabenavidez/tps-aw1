@@ -1,0 +1,3 @@
+# Dependencias de Node.js, sin importar la profundidad de la carpeta.
+node_modules/
+**/node_modules/
