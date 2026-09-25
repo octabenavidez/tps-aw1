@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Catálogo</title>
+</head>
+
+<body>
+    <header>
+        <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html">Catálogo</a>
+            <a href="./carrito.html">Carrito</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Catálogo</h1>
+
+        <section>
+            <h2>Buscar</h2>
+            <form action="./catalogo.html" method="get">
+                <label for="busqueda">Buscar productos</label>
+                <input type="search" id="busqueda" name="q" placeholder="Ej.: cubre volante, faros LED">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Filtros</h2>
+            <form action="./catalogo.html" method="get">
+                <p>
+                    <label><input type="checkbox" name="categoria" value="interior"> Accesorios interiores</label>
+                </p>
+                <p>
+                    <label><input type="checkbox" name="categoria" value="exterior"> Accesorios exteriores</label>
+                </p>
+                <p>
+                    <label><input type="checkbox" name="categoria" value="limpieza"> Limpieza y cuidado</label>
+                </p>
+                <p>
+                    <label><input type="checkbox" name="categoria" value="iluminacion"> Iluminación</label>
+                </p>
+                <p>
+                    <label><input type="checkbox" name="categoria" value="personalizacion"> Personalización</label>
+                </p>
+
+                <p>
+                    <label for="marca">Marca</label>
+                    <select id="marca" name="marca">
+                        <option value="">Todas las marcas</option>
+                        <option value="ford">Ford</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="peugeot">Peugeot</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="modelo">Modelo</label>
+                    <select id="modelo" name="modelo">
+                        <option value="">Todos los modelos</option>
+                        <option value="fiesta">Fiesta</option>
+                        <option value="focus">Focus</option>
+                        <option value="ka">Ka</option>
+                    </select>
+                </p>
+
+                <p>
+                    <button type="submit">Aplicar filtros</button>
+                    <button type="reset">Limpiar filtros</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Productos</h2>
+            <p>40 productos encontrados</p>
+
+            <div>
+                <article>
+                    <h3>Spoiler trasero deportivo</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/spoiler-trasero.svg" alt="spoiler trasero deportivo">
+                        <p>Fibra de carbono con adhesivo estructural incluido.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $45.000</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+
+                <article>
+                    <h3>Cubre espejos fibra</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/cubre-espejos.svg" alt="cubre espejos fibra">
+                        <p>Par de cubre espejos con terminación brillante.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $14.200</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+
+                <article>
+                    <h3>Faros LED H4</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/faros-led-h4.svg" alt="faros LED H4">
+                        <p>6000 K, cuerpo de aluminio y alta potencia.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $28.700</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+
+                <article>
+                    <h3>Luces LED interior</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/luces-interior.svg" alt="luces LED interior">
+                        <p>Kit de 4 módulos con control de intensidad.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $9.790</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+
+                <article>
+                    <h3>Barra LED 20 pulgadas</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/barra-led.svg" alt="barra LED 20 pulgadas">
+                        <p>Uso auxiliar todo terreno, resistente al agua.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $34.900</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+
+                <article>
+                    <h3>Kit de limpieza completo</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/kit-limpieza.svg" alt="kit de limpieza completo">
+                        <p>Shampoo, cera, silicona y dos paños de microfibra.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $19.600</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+
+                <article>
+                    <h3>Cubre volante deportivo</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/cubre-volante.svg" alt="cubre volante deportivo">
+                        <p>Cuero ecológico con costura contrastante.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $12.400</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+
+                <article>
+                    <h3>Ambientador para auto</h3>
+                    <picture>
+                        <img src="./recursos/imagenes/productos/ambientador.svg" alt="ambientador para auto">
+                        <p>Aroma a madera, duración aproximada de 60 días.</p>
+                    </picture>
+                    <ul>
+                        <li>Precio $3.200</li>
+                    </ul>
+                    <a href="./producto.html">Ver producto</a>
+                </article>
+            </div>
+
+            <nav>
+                <a href="./catalogo.html">1</a>
+                <a href="./catalogo.html">2</a>
+                <a href="./catalogo.html">3</a>
+                <a href="./catalogo.html">Siguiente</a>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/racinggarage" target="_blank">
+                    @racinggarage
+                </a>
+            </li>
+            <li>Av. Colón 1234 - Córdoba</li>
+            <li>info@racinggarage.com.ar</li>
+            <li>+54 351 123-4567</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

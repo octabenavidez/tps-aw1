@@ -1,0 +1,13 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="500" fill="#161616"/>
+<g transform="translate(600,270)">
+  <path d="M-380,60 C-370,10 -320,-15 -240,-25 L-120,-45 C-40,-53 60,-50 110,-15
+           L200,45 L330,55 C350,57 360,73 348,90
+           L-320,90 C-345,90 -382,95 -380,60 Z" fill="#F2F2F2"/>
+  <circle cx="-250" cy="90" r="38" fill="#161616"/>
+  <circle cx="-250" cy="90" r="16" fill="#8A8A8A"/>
+  <circle cx="220" cy="90" r="38" fill="#161616"/>
+  <circle cx="220" cy="90" r="16" fill="#8A8A8A"/>
+</g>
+<text x="60" y="90" font-family="Arial, sans-serif" font-weight="700" font-size="46" fill="#F2F2F2">RACING GARAGE</text>
+<text x="60" y="128" font-family="Arial, sans-serif" font-size="22" fill="#D9481F">Accesorios para tu auto</text>
+</svg>

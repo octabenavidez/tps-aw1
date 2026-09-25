@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Finalizar compra</title>
+</head>
+
+<body>
+    <header>
+        <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html">Catálogo</a>
+            <a href="./carrito.html">Carrito</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Finalizar compra</h1>
+        <p>Los campos con (*) son obligatorios.</p>
+
+        <form action="./confirmacion.html" method="post">
+
+            <h2>Datos del cliente</h2>
+            <p>
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required minlength="2">
+            </p>
+            <p>
+                <label for="apellido">Apellido *</label>
+                <input type="text" id="apellido" name="apellido" required minlength="2">
+            </p>
+            <p>
+                <label for="dni">DNI *</label>
+                <input type="text" id="dni" name="dni" required pattern="[0-9]{7,8}">
+            </p>
+
+            <h2>Datos de contacto</h2>
+            <p>
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+            <p>
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </p>
+
+            <h2>Datos de envío</h2>
+            <p>
+                <label for="calle">Calle y número *</label>
+                <input type="text" id="calle" name="calle" required>
+            </p>
+            <p>
+                <label for="ciudad">Ciudad *</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+            </p>
+            <p>
+                <label for="provincia">Provincia *</label>
+                <select id="provincia" name="provincia" required>
+                    <option value="">Elegí una provincia</option>
+                    <option value="buenos-aires">Buenos Aires</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="mendoza">Mendoza</option>
+                    <option value="santa-fe">Santa Fe</option>
+                </select>
+            </p>
+            <p>
+                <label for="cp">Código postal *</label>
+                <input type="text" id="cp" name="cp" required pattern="[0-9]{4}">
+            </p>
+
+            <h2>Método de envío</h2>
+            <p>
+                <label><input type="radio" name="envio" value="domicilio" checked> Envío a domicilio</label>
+            </p>
+            <p>
+                <label><input type="radio" name="envio" value="sucursal"> Retiro en sucursal de correo</label>
+            </p>
+            <p>
+                <label><input type="radio" name="envio" value="local"> Retiro en el local de Córdoba</label>
+            </p>
+
+            <h2>Método de pago</h2>
+            <p>
+                <label><input type="radio" name="pago" value="tarjeta" checked> Tarjeta de crédito o débito</label>
+            </p>
+            <p>
+                <label><input type="radio" name="pago" value="transferencia"> Transferencia bancaria</label>
+            </p>
+            <p>
+                <label><input type="radio" name="pago" value="efectivo"> Efectivo al retirar</label>
+            </p>
+
+            <h2>Resumen del pedido</h2>
+            <ul>
+                <li>Faros LED H4 x 1 - $28.700</li>
+                <li>Cubre volante deportivo x 2 - $24.800</li>
+                <li>Envío: Gratis</li>
+                <li>Total: $53.500</li>
+            </ul>
+
+            <p>
+                <label><input type="checkbox" name="terminos" required> Acepto los términos y condiciones *</label>
+            </p>
+
+            <button type="submit">Confirmar pedido</button>
+            <a href="./carrito.html">Volver al carrito</a>
+        </form>
+    </main>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/racinggarage" target="_blank">
+                    @racinggarage
+                </a>
+            </li>
+            <li>Av. Colón 1234 - Córdoba</li>
+            <li>info@racinggarage.com.ar</li>
+            <li>+54 351 123-4567</li>
+        </ul>
+    </footer>
+</body>
+
+</html>
