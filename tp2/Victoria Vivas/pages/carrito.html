@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Carrito de compras de Racing Garage. Revisá tus productos seleccionados antes de finalizar tu compra.">
+    <title>Racing Garage - Carrito</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+
+            <strong>RACING GARAGE</strong>
+
+            <button type="button"
+                    aria-label="Abrir carrito de compras">
+                🛒
+            </button>
+
+        </div>
+
+
+        <nav aria-label="Navegación principal">
+
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="nosotros.html">NOSOTROS</a>
+            <a href="contacto.html">CONTACTOS</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <header>
+
+            <h1>CARRITO DE COMPRAS</h1>
+
+            <p>
+                Revisá los productos seleccionados antes de continuar con tu compra.
+            </p>
+
+        </header>
+
+
+        <div>
+
+
+            <!-- PRODUCTOS DEL CARRITO -->
+
+            <section aria-labelledby="titulo-carrito">
+
+                <h2 id="titulo-carrito">
+                    Productos seleccionados
+                </h2>
+
+
+                <table>
+
+                    <caption>
+                        Detalle de los productos agregados al carrito
+                    </caption>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">Producto</th>
+
+                            <th scope="col">Precio</th>
+
+                            <th scope="col">Cantidad</th>
+
+                            <th scope="col">Subtotal</th>
+
+                            <th scope="col">Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- PRODUCTO 1 -->
+
+                        <tr>
+
+                            <td>
+
+                                <!-- IMAGEN:
+                                Buscar una imagen del "Escape de Titanio Alto Flujo"
+                                Puede ser la misma imagen escape.jpg que ya utilizás
+                                en producto.html.
+                                -->
+
+                                <img src="./imagenes/escape.jpg"
+                                     alt="Escape de Titanio Alto Flujo"
+                                     width="100"
+                                     height="70">
+
+                                <a href="producto.html">
+                                    Escape de Titanio Alto Flujo
+                                </a>
+
+                            </td>
+
+
+                            <td>
+                                $28.000
+                            </td>
+
+
+                            <td>
+
+                                <label for="cantidad-escape">
+                                    Cantidad
+                                </label>
+
+                                <input type="number"
+                                       id="cantidad-escape"
+                                       name="cantidad-escape"
+                                       min="1"
+                                       value="1">
+
+                            </td>
+
+
+                            <td>
+                                <strong>$28.000</strong>
+                            </td>
+
+
+                            <td>
+
+                                <button type="button"
+                                        aria-label="Eliminar Escape de Titanio Alto Flujo del carrito">
+
+                                    ELIMINAR
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- PRODUCTO 2 -->
+
+                        <tr>
+
+                            <td>
+
+                                <!-- IMAGEN:
+                                Buscar una imagen de un "Filtro de Aire Cónico"
+                                Podés reutilizar filtroaire.jpg,
+                                que ya tenés en tu proyecto.
+                                -->
+
+                                <img src="./imagenes/filtroaire.jpg"
+                                     alt="Filtro de Aire Cónico"
+                                     width="100"
+                                     height="70">
+
+                                <a href="producto.html">
+                                    Filtro de Aire Cónico
+                                </a>
+
+                            </td>
+
+
+                            <td>
+                                $8.500
+                            </td>
+
+
+                            <td>
+
+                                <label for="cantidad-filtro">
+                                    Cantidad
+                                </label>
+
+                                <input type="number"
+                                       id="cantidad-filtro"
+                                       name="cantidad-filtro"
+                                       min="1"
+                                       value="1">
+
+                            </td>
+
+
+                            <td>
+                                <strong>$8.500</strong>
+                            </td>
+
+
+                            <td>
+
+                                <button type="button"
+                                        aria-label="Eliminar Filtro de Aire Cónico del carrito">
+
+                                    ELIMINAR
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                    <tfoot>
+
+                        <tr>
+
+                            <th colspan="3" scope="row">
+                                TOTAL
+                            </th>
+
+                            <td>
+                                <strong>$36.500</strong>
+                            </td>
+
+                            <td></td>
+
+                        </tr>
+
+                    </tfoot>
+
+                </table>
+
+
+                <div>
+
+                    <a href="catalogo.html">
+                        ← CONTINUAR COMPRANDO
+                    </a>
+
+
+                    <button type="button">
+                        VACIAR CARRITO
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESUMEN DE COMPRA -->
+
+            <aside aria-labelledby="titulo-resumen">
+
+                <h2 id="titulo-resumen">
+                    RESUMEN DE LA COMPRA
+                </h2>
+
+
+                <dl>
+
+                    <div>
+
+                        <dt>Subtotal:</dt>
+
+                        <dd>
+                            $36.500
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>Envío:</dt>
+
+                        <dd>
+                            A calcular
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>Total:</dt>
+
+                        <dd>
+                            <strong>$36.500</strong>
+                        </dd>
+
+                    </div>
+
+                </dl>
+
+
+                <a href="finalizar-compra.html">
+                    FINALIZAR COMPRA
+                </a>
+
+
+                <p>
+                    Compra segura y protegida.
+                </p>
+
+            </aside>
+
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Racing Garage - Accesorios para tu vehículo
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

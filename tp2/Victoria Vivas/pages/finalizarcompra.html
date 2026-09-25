@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Finalizar compra en Racing Garage. Completa tus datos para confirmar tu pedido.">
+
+    <title>Finalizar Compra | Racing Garage</title>
+</head>
+
+<body>
+
+    <header>
+
+        <strong>RACING GARAGE</strong>
+
+        <nav aria-label="Navegación principal">
+
+            <a href="index.html">INICIO</a>
+
+            <a href="catalogo.html">CATÁLOGO</a>
+
+            <a href="nosotros.html">NOSOTROS</a>
+
+            <a href="contacto.html">CONTACTOS</a>
+
+            <a href="carrito.html"
+                aria-label="Abrir carrito de compras">
+                🛒
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section aria-labelledby="titulo-compra">
+
+            <h1 id="titulo-compra">
+                FINALIZAR COMPRA
+            </h1>
+
+            <p>
+                Completá tus datos para confirmar tu pedido.
+            </p>
+
+
+            <section aria-labelledby="titulo-formulario">
+
+                <h2 id="titulo-formulario">
+                    Datos para la compra
+                </h2>
+
+                <form action="confirmacion-compra.html" method="get">
+
+
+                    <fieldset>
+
+                        <legend>
+                            Datos del cliente
+                        </legend>
+
+                        <div>
+
+                            <label for="nombre">
+                                Nombre:
+                            </label>
+
+                            <input type="text"
+                                id="nombre"
+                                name="nombre"
+                                required
+                                autocomplete="given-name">
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="apellido">
+                                Apellido:
+                            </label>
+
+                            <input type="text"
+                                id="apellido"
+                                name="apellido"
+                                required
+                                autocomplete="family-name">
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="dni">
+                                DNI:
+                            </label>
+
+                            <input type="text"
+                                id="dni"
+                                name="dni"
+                                required>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <fieldset>
+
+                        <legend>
+                            Datos de contacto
+                        </legend>
+
+                        <div>
+
+                            <label for="email">
+                                Correo electrónico:
+                            </label>
+
+                            <input type="email"
+                                id="email"
+                                name="email"
+                                required
+                                autocomplete="email">
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="telefono">
+                                Teléfono:
+                            </label>
+
+                            <input type="tel"
+                                id="telefono"
+                                name="telefono"
+                                required
+                                autocomplete="tel">
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <fieldset>
+
+                        <legend>
+                            Dirección de entrega
+                        </legend>
+
+                        <div>
+
+                            <label for="direccion">
+                                Dirección:
+                            </label>
+
+                            <input type="text"
+                                id="direccion"
+                                name="direccion"
+                                required
+                                autocomplete="street-address">
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="ciudad">
+                                Ciudad:
+                            </label>
+
+                            <input type="text"
+                                id="ciudad"
+                                name="ciudad"
+                                required>
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="provincia">
+                                Provincia:
+                            </label>
+
+                            <select id="provincia"
+                                name="provincia"
+                                required>
+
+                                <option value="">
+                                    Seleccioná una provincia
+                                </option>
+
+                                <option value="cordoba">
+                                    Córdoba
+                                </option>
+
+                                <option value="buenos-aires">
+                                    Buenos Aires
+                                </option>
+
+                                <option value="santa-fe">
+                                    Santa Fe
+                                </option>
+
+                                <option value="mendoza">
+                                    Mendoza
+                                </option>
+
+                                <option value="otra">
+                                    Otra
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="codigo-postal">
+                                Código postal:
+                            </label>
+
+                            <input type="text"
+                                id="codigo-postal"
+                                name="codigo-postal"
+                                required>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <fieldset>
+
+                        <legend>
+                            Método de pago
+                        </legend>
+
+                        <div>
+
+                            <input type="radio"
+                                id="tarjeta"
+                                name="metodo-pago"
+                                value="tarjeta"
+                                required>
+
+                            <label for="tarjeta">
+                                Tarjeta de crédito o débito
+                            </label>
+
+                        </div>
+
+
+                        <div>
+
+                            <input type="radio"
+                                id="mercado-pago"
+                                name="metodo-pago"
+                                value="mercado-pago">
+
+                            <label for="mercado-pago">
+                                Mercado Pago
+                            </label>
+
+                        </div>
+
+
+                        <div>
+
+                            <input type="radio"
+                                id="transferencia"
+                                name="metodo-pago"
+                                value="transferencia">
+
+                            <label for="transferencia">
+                                Transferencia bancaria
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <div>
+
+                        <input type="checkbox"
+                            id="terminos"
+                            name="terminos"
+                            required>
+
+                        <label for="terminos">
+                            Acepto los términos y condiciones de compra.
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit">
+                        CONFIRMAR PEDIDO
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <aside aria-labelledby="titulo-resumen">
+
+                <h2 id="titulo-resumen">
+                    Resumen del pedido
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Escape de Titanio Alto Flujo -
+                        $28.000
+                    </li>
+
+                    <li>
+                        Filtro de Aire Cónico -
+                        $8.500
+                    </li>
+
+                </ul>
+
+
+                <dl>
+
+                    <div>
+
+                        <dt>
+                            Subtotal:
+                        </dt>
+
+                        <dd>
+                            $36.500
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Envío:
+                        </dt>
+
+                        <dd>
+                            A calcular
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            Total:
+                        </dt>
+
+                        <dd>
+                            <strong>$36.500</strong>
+                        </dd>
+
+                    </div>
+
+                </dl>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Racing Garage - Accesorios para tu vehículo
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
