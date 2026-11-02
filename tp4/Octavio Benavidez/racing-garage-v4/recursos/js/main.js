@@ -1,20 +1,5 @@
-/**
- * @fileoverview Main entry point script for general pages (index, nosotros).
- * Initializes global layout components such as header cart counter badges.
- */
+// Script general para páginas estáticas (inicio, nosotros)
+import { actualizarContadorCarrito } from "./carrito.js";
 
-import { initHeaderNavigation } from "./modules/header-navigation.js";
-
-/**
- * Initializes common application features.
- */
-function initApp() {
-    initHeaderNavigation();
-}
-
-// Bootstraps when DOM is ready
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initApp);
-} else {
-    initApp();
-}
+// Actualiza el número de productos del carrito en el menú de navegación
+actualizarContadorCarrito();
