@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Catálogo</title>
+    <link rel="stylesheet" href="recursos/css/index.css">
+    <script type="module" src="./recursos/js/catalogo.js"></script>
+</head>
+<body>
+    <header class="cabecera-principal">
+        <a href="./index.html">
+            <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+        </a>
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html" aria-current="page">Catálogo</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+            <a href="./carrito.html">Carrito</a>
+        </nav>
+    </header>
+    <main class="contenido-principal">
+        <h1>Catálogo de Productos</h1>
+
+        <!-- filtros del catálogo -->
+        <form class="filtros-catalogo">
+            <div class="campo-filtro">
+                <label for="id-marca">Marca de vehículo</label>
+                <select name="marca" id="id-marca">
+                    <option value="">Todas las marcas</option>
+                    <option value="ford">Ford</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="volkswagen">Volkswagen</option>
+                </select>
+            </div>
+
+            <div class="campo-filtro">
+                <label for="id-categoria">Categoría</label>
+                <select name="categoria" id="id-categoria">
+                    <option value="">Todas las categorías</option>
+                    <option value="interior">Accesorios interiores</option>
+                    <option value="exterior">Accesorios exteriores</option>
+                    <option value="limpieza">Limpieza y cuidado</option>
+                    <option value="iluminacion">Iluminación</option>
+                    <option value="personalizacion">Personalización</option>
+                </select>
+            </div>
+        </form>
+
+        <section>
+            <h2>Productos disponibles</h2>
+            <!-- renderizado dinámico de productos vía JavaScript -->
+            <div class="catalogo-productos"></div>
+        </section>
+    </main>
+    <footer class="pie-principal">
+        <ul class="pie-lista">
+            <li>
+                <a href="https://instagram.com/@racinggarage" target="_blank" aria-label="Seguinos en Instagram, se abre en una pestaña nueva">
+                    @racinggarage
+                </a>
+            </li>
+            <li>
+                Córdoba, Argentina
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
