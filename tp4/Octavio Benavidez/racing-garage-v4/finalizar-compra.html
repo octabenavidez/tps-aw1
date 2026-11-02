@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garage - Finalizar compra</title>
+    <link rel="stylesheet" href="recursos/css/index.css">
+    <script type="module" src="./recursos/js/pages/checkout-page.js"></script>
+</head>
+<body>
+    <header class="cabecera-principal">
+        <a href="./index.html">
+            <img src="./recursos/imagenes/logo.svg" alt="logo Racing Garage">
+        </a>
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./catalogo.html">Catálogo</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+            <a href="./carrito.html">Carrito</a>
+        </nav>
+    </header>
+    <main class="contenido-principal">
+        <h1>Finalizar compra</h1>
+
+        <!-- datos para el envío del pedido -->
+        <!--
+        nombre
+        email
+        telefono
+        direccion
+        ciudad
+        codigo postal
+        metodo de pago
+        -->
+        <form class="formulario" action="./confirmacion.html" method="get">
+            <h2>Datos de envío</h2>
+            <label for="id-nombre">Nombre completo</label>
+            <input type="text" name="nombre" id="id-nombre" required placeholder="Ej: Juan Pérez">
+
+            <label for="id-email">Email</label>
+            <input type="email" name="email" id="id-email" required placeholder="juan@ejemplo.com">
+
+            <label for="id-telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="id-telefono" required placeholder="Ej: 3511234567">
+
+            <label for="id-direccion">Dirección</label>
+            <input type="text" name="direccion" id="id-direccion" required placeholder="Calle y número">
+
+            <label for="id-ciudad">Ciudad</label>
+            <input type="text" name="ciudad" id="id-ciudad" required placeholder="Ej: Córdoba">
+
+            <label for="id-codigo-postal">Código postal</label>
+            <input type="text" name="codigo-postal" id="id-codigo-postal" required placeholder="Ej: 5000">
+
+            <h2>Forma de pago</h2>
+            <fieldset class="opciones-pago">
+                <legend class="visually-hidden">Seleccionar método de pago</legend>
+
+                <label class="opcion-radio">
+                    <input type="radio" name="metodo-pago" value="tarjeta" checked>
+                    <span>Tarjeta de crédito / débito</span>
+                </label>
+
+                <label class="opcion-radio">
+                    <input type="radio" name="metodo-pago" value="transferencia">
+                    <span>Transferencia bancaria (10% descuento)</span>
+                </label>
+
+                <label class="opcion-radio">
+                    <input type="radio" name="metodo-pago" value="efectivo">
+                    <span>Efectivo contra entrega</span>
+                </label>
+            </fieldset>
+
+            <h2>Resumen del pedido</h2>
+            <!-- resumen dinámico cargado vía JavaScript -->
+            <ul class="resumen-lista">
+                <li><span>Subtotal</span> <span>$ 0</span></li>
+                <li><span>Envío</span> <span>Gratis</span></li>
+                <li><span>Total</span> <span>$ 0</span></li>
+            </ul>
+
+            <button class="boton-principal" type="submit">Confirmar compra</button>
+            <a class="vinculo-secundario" href="./carrito.html">Volver al carrito</a>
+        </form>
+    </main>
+    <footer class="pie-principal">
+        <ul class="pie-lista">
+            <li>
+                <a href="https://instagram.com/@racinggarage" target="_blank" aria-label="Seguinos en Instagram, se abre en una pestaña nueva">
+                    @racinggarage
+                </a>
+            </li>
+            <li>
+                Córdoba, Argentina
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
