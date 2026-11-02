@@ -1,123 +1,77 @@
-// Script para la página del carrito de compras
-import {
-    obtenerCarrito,
-    cambiarCantidad,
-    eliminarDelCarrito,
-    calcularTotalCarrito,
-    actualizarContadorCarrito
-} from "./carrito.js";
+// Script del carrito de compras
+// Lee los productos guardados en localStorage y los muestra en pantalla
 
-// Elementos de la página
-const contenedorCarrito = document.querySelector(".carrito-productos");
+// Leemos el carrito desde localStorage
+const carritoGuardado = localStorage.getItem("carrito");
+const carrito = carritoGuardado ? JSON.parse(carritoGuardado) : [];
+
+// Elementos del HTML
+const contenedorProductos = document.querySelector(".carrito-productos");
 const listaResumen = document.querySelector(".resumen-pedido ul");
-const formularioCarrito = document.querySelector(".formulario-carrito");
-const botonPagar = document.querySelector(".resumen-pedido button[type='submit']");
 
-// Función para pintar la lista de productos y los totales
-function actualizarVistaCarrito() {
-    const carrito = obtenerCarrito();
-    const total = calcularTotalCarrito();
-
-    // Actualizamos el contador del menú
-    actualizarContadorCarrito();
-
-    if (!contenedorCarrito) return;
-    contenedorCarrito.innerHTML = "";
-
-    // Si el carrito está vacío
-    if (carrito.length === 0) {
-        contenedorCarrito.innerHTML = `
-            <div class="mensaje-vacio">
-                <p>Tu carrito de compras está vacío.</p>
-                <a class="boton-principal" href="./catalogo.html">Ir al catálogo</a>
-            </div>
-        `;
-
-        if (listaResumen) {
-            listaResumen.innerHTML = `
-                <li><span>Subtotal</span> <span>$ 0</span></li>
-                <li><span>Envío</span> <span>Gratis</span></li>
-                <li><span>Total</span> <span>$ 0</span></li>
-            `;
-        }
-
-        if (botonPagar) {
-            botonPagar.disabled = true;
-            botonPagar.style.opacity = "0.5";
-            botonPagar.style.cursor = "not-allowed";
-        }
-        return;
-    }
-
-    // Si hay productos, habilitamos el botón de pago
-    if (botonPagar) {
-        botonPagar.disabled = false;
-        botonPagar.style.opacity = "1";
-        botonPagar.style.cursor = "pointer";
-    }
-
-    // Dibujamos cada producto en el carrito
-    carrito.forEach((item) => {
-        const articulo = document.createElement("article");
-        articulo.className = "item-carrito";
-
-        const subtotalItem = item.precio * item.cantidad;
-
-        articulo.innerHTML = `
-            <picture>
-                <img src="${item.imagen}" alt="${item.nombre}">
-            </picture>
-            <p>${item.nombre}</p>
-
-            <label for="cant-${item.id}">Cantidad</label>
-            <input type="number" id="cant-${item.id}" class="input-cantidad" data-id="${item.id}" value="${item.cantidad}" min="1">
-
-            <p>Precio $ ${subtotalItem.toLocaleString("es-AR")}</p>
-
-            <button class="boton-secundario btn-eliminar" data-id="${item.id}" type="button">Eliminar</button>
-        `;
-
-        contenedorCarrito.appendChild(articulo);
+// Función que calcula el total del carrito
+function calcularTotal() {
+    let total = 0;
+    carrito.forEach(function (item) {
+        total = total + item.precio * item.cantidad;
     });
-
-    // Actualizamos el resumen
-    if (listaResumen) {
-        listaResumen.innerHTML = `
-            <li><span>Subtotal</span> <span>$ ${total.toLocaleString("es-AR")}</span></li>
-            <li><span>Envío</span> <span>Gratis</span></li>
-            <li><span>Total</span> <span>$ ${total.toLocaleString("es-AR")}</span></li>
-        `;
-    }
+    return total;
 }
 
-// Eventos sobre los productos del carrito (cambio de cantidad o eliminar)
-contenedorCarrito?.addEventListener("change", (e) => {
-    if (e.target.classList.contains("input-cantidad")) {
-        const id = e.target.dataset.id;
-        const nuevaCantidad = parseInt(e.target.value, 10);
-        if (nuevaCantidad >= 1) {
-            cambiarCantidad(id, nuevaCantidad);
-            actualizarVistaCarrito();
+// Función que dibuja los productos del carrito en el HTML
+function mostrarCarrito() {
+    contenedorProductos.innerHTML = "";
+
+    if (carrito.length === 0) {
+        contenedorProductos.innerHTML = "<p>Tu carrito está vacío.</p>";
+    } else {
+        carrito.forEach(function (item) {
+            const articulo = document.createElement("article");
+            articulo.className = "item-carrito";
+
+            articulo.innerHTML = `
+                <picture>
+                    <img src="${item.imagen}" alt="${item.nombre}">
+                </picture>
+                <p>${item.nombre}</p>
+                <p>Precio $ ${(item.precio * item.cantidad).toLocaleString("es-AR")}</p>
+                <button class="boton-secundario" type="button" data-id="${item.id}">Eliminar</button>
+            `;
+
+            contenedorProductos.appendChild(articulo);
+        });
+    }
+
+    // Actualizamos el resumen con el total calculado
+    const total = calcularTotal();
+    listaResumen.innerHTML = `
+        <li>Subtotal $ ${total.toLocaleString("es-AR")}</li>
+        <li>Envío Gratis</li>
+        <li>Total $ ${total.toLocaleString("es-AR")}</li>
+    `;
+}
+
+// Evento: cuando se hace click en "Eliminar" borramos ese producto del carrito
+contenedorProductos.addEventListener("click", function (evento) {
+    if (evento.target.tagName === "BUTTON") {
+        const idAEliminar = evento.target.dataset.id;
+
+        // Buscamos el índice del producto en el array
+        let indice = -1;
+        carrito.forEach(function (item, i) {
+            if (item.id === idAEliminar) {
+                indice = i;
+            }
+        });
+
+        // Lo eliminamos del array y actualizamos el localStorage
+        if (indice !== -1) {
+            carrito.splice(indice, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            mostrarCarrito();
         }
     }
 });
 
-contenedorCarrito?.addEventListener("click", (e) => {
-    if (e.target.classList.contains("btn-eliminar")) {
-        const id = e.target.dataset.id;
-        eliminarDelCarrito(id);
-        actualizarVistaCarrito();
-    }
-});
-
-// Verificamos antes de pasar a la compra que el carrito tenga artículos
-formularioCarrito?.addEventListener("submit", (e) => {
-    const carrito = obtenerCarrito();
-    if (carrito.length === 0) {
-        e.preventDefault();
-        alert("El carrito está vacío. Agregá algún producto antes de continuar.");
-    }
-});
-
-// Carga inicial
-actualizarVistaCarrito();
+// Mostramos el carrito al cargar la página
+mostrarCarrito();

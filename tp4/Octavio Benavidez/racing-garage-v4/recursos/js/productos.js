@@ -1,4 +1,5 @@
-// Módulo con la estructura de datos del catálogo de productos
+// Datos de los productos del catálogo
+// Cada producto es un objeto con sus propiedades
 
 export const productos = [
     {
@@ -27,7 +28,7 @@ export const productos = [
         imagen: "./recursos/imagenes/producto/suspension.jpg",
         descripcionCorta: "Suspensión regulable de alto rendimiento",
         caracteristica: "Compatible con la mayoría de vehículos",
-        descripcionLarga: "Kit de suspensión coilover ajustable en altura y dureza. Permite calibrar el centro de gravedad del auto para un mejor agarre y estabilidad en curvas.",
+        descripcionLarga: "Kit de suspensión coilover ajustable en altura y dureza. Permite calibrar el centro de gravedad del auto para un mejor agarre y estabilidad.",
         especificaciones: [
             "Ajuste de altura: 30mm a 70mm",
             "32 niveles de dureza",
@@ -44,7 +45,7 @@ export const productos = [
         imagen: "./recursos/imagenes/producto/escape.jpg",
         descripcionCorta: "Sistema de escape deportivo de alto flujo",
         caracteristica: "Acero inoxidable T304",
-        descripcionLarga: "Sistema de escape deportivo diseñado para optimizar el flujo de gases, aumentar la respuesta del motor y brindar un sonido deportivo profundo.",
+        descripcionLarga: "Sistema de escape deportivo para optimizar el flujo de gases, aumentar la respuesta del motor y brindar un sonido más profundo.",
         especificaciones: [
             "Material: Acero inoxidable T304",
             "Diámetro: 3 pulgadas",
@@ -61,7 +62,7 @@ export const productos = [
         imagen: "./recursos/imagenes/producto/volante.jpg",
         descripcionCorta: "Volante de cuero con inserto de fibra de carbono",
         caracteristica: "Compatible con modelos europeos y asiáticos",
-        descripcionLarga: "Volante ergonómico forrado en cuero perforado con detalles en fibra de carbono real. Excelente agarre para conducción deportiva.",
+        descripcionLarga: "Volante ergonómico forrado en cuero perforado con detalles en fibra de carbono real. Buen agarre para conducción deportiva.",
         especificaciones: [
             "Material: Cuero perforado y fibra de carbono",
             "Costuras reforzadas en color rojo",
@@ -78,12 +79,11 @@ export const productos = [
         imagen: "./recursos/imagenes/producto/volante.jpg",
         descripcionCorta: "Kit de pedaleras antideslizantes de aluminio",
         caracteristica: "Goma antideslizante de alta densidad",
-        descripcionLarga: "Juego de cubre pedales deportivos con tacos de goma de alta adherencia y placas de aluminio. Mayor seguridad y estilo deportivo.",
+        descripcionLarga: "Juego de cubre pedales con tacos de goma de alta adherencia y placas de aluminio. Mayor seguridad y estilo.",
         especificaciones: [
             "Material: Aluminio y goma antideslizante",
             "Fijación con tornillos y grapas",
-            "Compatible con caja manual y automática",
-            "Terminación pulida"
+            "Compatible con caja manual y automática"
         ]
     },
     {
@@ -95,7 +95,7 @@ export const productos = [
         imagen: "./recursos/imagenes/producto/escape.jpg",
         descripcionCorta: "Kit de iluminación LED de alta potencia",
         caracteristica: "16.000 lúmenes - Blanco frío 6000K",
-        descripcionLarga: "Lámparas LED de alto poder lumínico con disipador térmico de aluminio. Excelente visibilidad nocturna y bajo consumo.",
+        descripcionLarga: "Lámparas LED de alto poder lumínico con disipador de aluminio. Excelente visibilidad nocturna y bajo consumo.",
         especificaciones: [
             "Potencia: 16.000 lúmenes",
             "Temperatura: 6000K blanco puro",
@@ -107,17 +107,16 @@ export const productos = [
         id: "kit-limpieza",
         nombre: "Kit Cuidado y Detailing Cerámico",
         categoria: "limpieza",
-        marca: "universal",
+        marca: "volkswagen",
         precio: 32000,
         imagen: "./recursos/imagenes/producto/llantas.jpg",
         descripcionCorta: "Pack integral de lavado, cera y brillo",
         caracteristica: "Efecto hidrofóbico y protección UV",
-        descripcionLarga: "Kit de productos para el lavado y mantenimiento estético del vehículo. Protege la pintura del sol y repele el agua y la suciedad.",
+        descripcionLarga: "Kit de productos para el lavado y mantenimiento estético del vehículo. Protege la pintura y repele el agua.",
         especificaciones: [
             "Shampoo pH neutro 500ml",
             "Sellador cerámico rápido 250ml",
-            "2 microfibras premium",
-            "Pad aplicador de espuma"
+            "2 microfibras premium"
         ]
     },
     {
@@ -129,7 +128,7 @@ export const productos = [
         imagen: "./recursos/imagenes/producto/suspension.jpg",
         descripcionCorta: "Spoiler aerodinámico con acabado símil carbono",
         caracteristica: "Acabado brillante fibra de carbono",
-        descripcionLarga: "Alerón de perfil deportivo que mejora la estabilidad a alta velocidad y resalta la estética trasera de tu auto.",
+        descripcionLarga: "Alerón deportivo que mejora la estabilidad a alta velocidad y resalta la estética trasera del auto.",
         especificaciones: [
             "Material: Plástico ABS de alta resistencia",
             "Acabado: Patrón fibra de carbono",
@@ -138,8 +137,3 @@ export const productos = [
         ]
     }
 ];
-
-// Función para buscar un producto por su id
-export function buscarProductoPorId(id) {
-    return productos.find((p) => p.id === id);
-}

@@ -1,93 +1,67 @@
-// Script para la página del catálogo de productos
-import { productos } from "./productos.js";
-import { actualizarContadorCarrito } from "./carrito.js";
+// Script del catálogo: dibuja las tarjetas de los productos y filtra por marca y categoría
 
-// Elementos de la página
+import { productos } from "./productos.js";
+
+// Elementos del HTML que vamos a usar
 const contenedor = document.querySelector(".catalogo-productos");
-const formularioFiltros = document.querySelector(".filtros-catalogo");
 const selectMarca = document.querySelector("#id-marca");
 const selectCategoria = document.querySelector("#id-categoria");
+const formularioFiltros = document.querySelector(".filtros-catalogo");
 
-// Función que dibuja las tarjetas de los productos en el HTML
-function renderizarProductos(lista) {
-    if (!contenedor) return;
+// Función que recibe una lista de productos y los dibuja en el contenedor
+function mostrarProductos(lista) {
     contenedor.innerHTML = "";
 
-    // Si no hay productos con ese filtro mostramos un aviso
     if (lista.length === 0) {
-        contenedor.innerHTML = `
-            <div class="mensaje-vacio">
-                <p>No se encontraron productos con los filtros seleccionados.</p>
-                <button type="button" class="boton-secundario" id="btn-restablecer">Ver todos los productos</button>
-            </div>
-        `;
-
-        document.querySelector("#btn-restablecer")?.addEventListener("click", () => {
-            if (selectMarca) selectMarca.value = "";
-            if (selectCategoria) selectCategoria.value = "";
-            aplicarFiltros();
-        });
+        contenedor.innerHTML = "<p>No se encontraron productos con esos filtros.</p>";
         return;
     }
 
-    // Recorremos los productos y creamos cada tarjeta
-    lista.forEach((prod) => {
+    lista.forEach(function (producto) {
         const tarjeta = document.createElement("article");
         tarjeta.className = "tarjeta-producto";
 
         tarjeta.innerHTML = `
-            <h3>${prod.nombre}</h3>
+            <h3>${producto.nombre}</h3>
             <picture>
-                <img src="${prod.imagen}" alt="${prod.nombre}">
+                <img src="${producto.imagen}" alt="${producto.nombre}">
             </picture>
-            <p>${prod.descripcionCorta}</p>
+            <p>${producto.descripcionCorta}</p>
             <ul>
-                <li>${prod.caracteristica}</li>
-                <li>Precio $ ${prod.precio.toLocaleString("es-AR")}</li>
+                <li>${producto.caracteristica}</li>
+                <li>Precio $ ${producto.precio.toLocaleString("es-AR")}</li>
             </ul>
-            <a class="boton-principal" href="./producto.html?id=${prod.id}">Ver más</a>
+            <a class="boton-principal" href="./producto.html?id=${producto.id}">Ver más</a>
         `;
 
         contenedor.appendChild(tarjeta);
     });
 }
 
-// Función que filtra según la marca y categoría elegidas
-function aplicarFiltros() {
-    const marca = selectMarca ? selectMarca.value : "";
-    const categoria = selectCategoria ? selectCategoria.value : "";
+// Función que filtra los productos según los valores seleccionados en los desplegables
+function filtrarProductos() {
+    const marcaElegida = selectMarca.value;
+    const categoriaElegida = selectCategoria.value;
 
-    const resultado = productos.filter((prod) => {
-        const coincideMarca = !marca || prod.marca === marca || prod.marca === "universal";
-        const coincideCategoria = !categoria || prod.categoria === categoria;
+    // Filtramos el array de productos manualmente
+    const resultado = productos.filter(function (producto) {
+        const coincideMarca = marcaElegida === "" || producto.marca === marcaElegida;
+        const coincideCategoria = categoriaElegida === "" || producto.categoria === categoriaElegida;
         return coincideMarca && coincideCategoria;
     });
 
-    renderizarProductos(resultado);
+    mostrarProductos(resultado);
 }
 
-// Evento al enviar el formulario de filtros (evitamos que recargue la página)
-formularioFiltros?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    aplicarFiltros();
+// Evento: cuando se envía el formulario de filtros aplicamos el filtro
+formularioFiltros.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+    filtrarProductos();
 });
 
-// Eventos para filtrar de forma automática al cambiar de opción
-selectMarca?.addEventListener("change", aplicarFiltros);
-selectCategoria?.addEventListener("change", aplicarFiltros);
+// Evento: también filtramos apenas cambia alguno de los selectores
+selectMarca.addEventListener("change", filtrarProductos);
+selectCategoria.addEventListener("change", filtrarProductos);
 
-// Si entramos desde el inicio con un filtro por URL (ej: catalogo.html?categoria=interior)
-const params = new URLSearchParams(window.location.search);
-const categoriaInicial = params.get("categoria");
-const marcaInicial = params.get("marca");
-
-if (categoriaInicial && selectCategoria) {
-    selectCategoria.value = categoriaInicial;
-}
-if (marcaInicial && selectMarca) {
-    selectMarca.value = marcaInicial;
-}
-
-// Inicializamos la vista
-actualizarContadorCarrito();
-aplicarFiltros();
+// Mostramos todos los productos al cargar la página
+mostrarProductos(productos);

@@ -1,22 +1,20 @@
-// Script para el formulario de contacto
-import { actualizarContadorCarrito } from "./carrito.js";
+// Script del formulario de contacto
+// Valida que los campos estén completos antes de enviar
 
-const formularioContacto = document.querySelector(".formulario");
+const formulario = document.querySelector(".formulario");
 
-formularioContacto?.addEventListener("submit", (e) => {
-    e.preventDefault();
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
 
-    const nombre = document.querySelector("#id-nombre")?.value.trim();
-    const email = document.querySelector("#id-email")?.value.trim();
-    const mensaje = document.querySelector("#id-mensaje")?.value.trim();
+    const nombre = document.querySelector("#id-nombre").value;
+    const email = document.querySelector("#id-email").value;
+    const mensaje = document.querySelector("#id-mensaje").value;
 
     if (!nombre || !email || !mensaje) {
-        alert("Por favor completá todos los campos antes de enviar.");
+        alert("Por favor completá todos los campos antes de enviar el mensaje.");
         return;
     }
 
-    alert(`¡Gracias por contactarnos, ${nombre}! Recibimos tu consulta y te responderemos a la brevedad.`);
-    formularioContacto.reset();
+    alert("¡Gracias " + nombre + "! Tu mensaje fue enviado. Te responderemos pronto.");
+    formulario.reset();
 });
-
-actualizarContadorCarrito();
